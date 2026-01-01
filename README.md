@@ -1,4 +1,4 @@
-# Special-Topic-Machine-Learning
+# Scalable Bayesian Inference via Stochastic Gradient Langevin Dynamics
 
 This project investigates scalable Bayesian inference using Stochastic Gradient Langevin Dynamics (SGLD). 
 The aim is to compare SGLD with classical MCMC methods and evaluate its effectiveness for uncertainty-aware learning on larger datasets.
