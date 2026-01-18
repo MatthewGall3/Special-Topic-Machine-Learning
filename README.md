@@ -34,7 +34,7 @@ The SGLD update is given by:
 \right)
 +
 \eta_t
-
+```
 
 We applied these algorithms to Bayesian logistic regression on the Australian
 Credit Approval dataset. Despite their differing computational properties, all
