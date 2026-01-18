@@ -81,3 +81,12 @@ In our previous logistic regression example, the posterior distribution was larg
 
 ***
 ## 5–Bayesian Neural Network
+
+Finally, We apply SGLD to a simple feedforward neural network for a binary classification task using the two moons dataset, a standard synthetic benchmark for assessing nonlinear classification models, generated using **sklearn.datasets**. The dataset is not linearly separable, making it
+unsuitable for linear models such as logistic regression. The figure below shows the posterior predictive confidence and uncertainty for the two moons classification problem. This two dimensional example provides a clear visual illustration of the key advantage of the Bayesian approach. Uncertainty is highest near the decision boundary and in regions where training data is sparse.
+
+<p align="center">
+<img width="1000"  height="500" alt="Uncertplot" src="https://github.com/user-attachments/assets/30747a6f-c6c6-42ce-94e5-79e3362f8fd5" />
+</p>
+
+
