@@ -66,7 +66,7 @@ dataset, we observe that predictive uncertainty varies substantially across test
 
 
 <p align="center">
-<img width="2067" height="1168" alt="post_pred_prob" src="https://github.com/user-attachments/assets/257c792b-d715-4985-b0d2-026e5239ab3e" />
+<img width="1700" height="1000" alt="post_pred_prob" src="https://github.com/user-attachments/assets/257c792b-d715-4985-b0d2-026e5239ab3e" />
 </p>
 
 
