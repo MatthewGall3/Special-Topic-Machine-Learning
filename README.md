@@ -18,23 +18,14 @@ step has lower computational cost and scales more effectively to large datasets.
 Moreover, under an asymptotically vanishing step-size schedule, SGLD is guaranteed
 to converge to the true posterior distribution.
 
-The SGLD update takes the form:
+The SGLD update is given by:
+**θ_{t+1} = θ_t + (ε_t / 2)(∇θ log p(θ_t) + (N / n) ∑_{i=1}^n ∇θ log p(x_i | θ_t)) + η_t
+**
 
-$ \theta_{t+1}
-=
-\theta_t
-+
-\frac{\epsilon_t}{2}
-\left(
-\nabla_{\theta} \log p(\theta_t)
-+
-\frac{N}{n}
-\sum_{i=1}^{n}
-\nabla_{\theta} \log p(x_i \mid \theta_t)
-\right)
-+
-\eta_t$
-
+We applied these algorithms to Bayesian logistic regression on the Australian
+Credit Approval dataset. Despite their differing computational properties, all
+three methods produced closely aligned posterior distributions, validating the
+use of SGLD as a scalable approximation to classical MCMC in this setting.
 
 ***
 2–Tuning Parameters
