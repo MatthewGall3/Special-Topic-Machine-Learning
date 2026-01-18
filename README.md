@@ -86,7 +86,25 @@ Finally, We apply SGLD to a simple feedforward neural network for a binary class
 unsuitable for linear models such as logistic regression. The figure below shows the posterior predictive confidence and uncertainty for the two moons classification problem. This two dimensional example provides a clear visual illustration of the key advantage of the Bayesian approach. Uncertainty is highest near the decision boundary and in regions where training data is sparse.
 
 <p align="center">
-<img width="1000"  height="500" alt="Uncertplot" src="https://github.com/user-attachments/assets/30747a6f-c6c6-42ce-94e5-79e3362f8fd5" />
+<table>
+  <tr>
+    <td>
+      <img
+        src="https://github.com/user-attachments/assets/30747a6f-c6c6-42ce-94e5-79e3362f8fd5"
+        width="500"
+        alt="Predictive Uncertainty"
+      />
+    </td>
+    <td>
+      <img
+        src="https://github.com/user-attachments/assets/62db46c1-16b2-4337-90c1-2989689f395f"
+        width="500"
+        alt="Predictive Confidence"
+      />
+    </td>
+  </tr>
+</table>
 </p>
+
 
 
