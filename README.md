@@ -46,6 +46,10 @@ use of SGLD as a scalable approximation to classical MCMC in this setting.
 ***
 2–Tuning Parameters
 
+When applying SGLD to a dataset, we must make sure to tune the step-size schedule correctly. We use a decaying step size and choose the initial value $\epsilon_0$ so that stochastic minibatch noise dominates initially, while the injected Langevin noise becomes dominant later. To achieve this behaviour,
+we perform a simple parameter search over $\epsilon_0$. Samples are retained only after this transition has occurred. The initial phase,during which the algorithm behaves similarly to stochastic optimisation before entering a sampling regime, is treated as burn-in and discarded in subsequentanalysis.
+
+<img width="1729" height="1295" alt="sgld_burnin_noise_variance" src="https://github.com/user-attachments/assets/e6edcb5e-1095-4036-9f7a-4c70dac44165" />
 
 
 ***
