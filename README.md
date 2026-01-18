@@ -5,11 +5,49 @@ The aim is to compare SGLD with classical MCMC methods and evaluate its effectiv
 This mini-project was completed during the Michaelmas term as part of the Machine Learning module in my MSc programme.
 
 ***
-1-Analytical vs Numerical Temperature Profiles
+## 1 – Sampling Algorithms
 
-We compared the analytical Stefan solution with numerical simulations of the phase-field model. The numerical solution (dashed) matches the analytical solution (solid) closely. The small discrepancy at the interface is due to the phase-field’s “smoothing” effect.
-<img width="800" height="600" alt="Temperature_Profile" src="https://github.com/user-attachments/assets/f4842c1e-7e59-4613-89a6-9dadebac84c3" />
+In this project, we compare three sampling algorithms: **Random-Walk Metropolis (RWM)**,
+the **Metropolis–Adjusted Langevin Algorithm (MALA)**, and **Stochastic Gradient
+Langevin Dynamics (SGLD)**.
+
+The key distinction is computational. While RWM and MALA require full-data
+likelihood or gradient evaluations at each iteration, SGLD replaces the exact
+posterior gradient with an unbiased minibatch estimate. As a result, each update
+step has lower computational cost and scales more effectively to large datasets.
+Moreover, under an asymptotically vanishing step-size schedule, SGLD is guaranteed
+to converge to the true posterior distribution.
+
+The SGLD update takes the form:
+
+$ \theta_{t+1}
+=
+\theta_t
++
+\frac{\epsilon_t}{2}
+\left(
+\nabla_{\theta} \log p(\theta_t)
++
+\frac{N}{n}
+\sum_{i=1}^{n}
+\nabla_{\theta} \log p(x_i \mid \theta_t)
+\right)
++
+\eta_t$
 
 
 ***
-2–Asymptotic Expansion of Initial Conditions
+2–Tuning Parameters
+
+
+
+***
+3–Uncertainity Graph
+
+
+***
+4–cSGLD 
+
+
+***
+5–Bayesian Neural Network
