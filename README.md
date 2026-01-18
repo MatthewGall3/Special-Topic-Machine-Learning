@@ -41,6 +41,8 @@ Credit Approval dataset. Despite their differing computational properties, all
 three methods produced closely aligned posterior distributions, validating the
 use of SGLD as a scalable approximation to classical MCMC in this setting.
 
+<img width="3569" height="1166" alt="parameter_dist" src="https://github.com/user-attachments/assets/bb563c83-6a26-44f0-ba76-4f079463d5e4" />
+
 ***
 2–Tuning Parameters
 
