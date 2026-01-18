@@ -46,8 +46,7 @@ use of SGLD as a scalable approximation to classical MCMC in this setting.
 ***
 2–Tuning Parameters
 
-When applying SGLD to a dataset, we must make sure to tune the step-size schedule correctly. We use a decaying step size and choose the initial value $\epsilon_0$ so that stochastic minibatch noise dominates initially, while the injected Langevin noise becomes dominant later. To achieve this behaviour,
-we perform a simple parameter search over $\epsilon_0$. Samples are retained only after this transition has occurred. The initial phase,during which the algorithm behaves similarly to stochastic optimisation before entering a sampling regime, is treated as burn-in and discarded in subsequentanalysis.
+When applying SGLD to a dataset, we must make sure to tune the step-size schedule correctly. We use a decaying step size and choose the initial value $\epsilon_0$ so that stochastic minibatch noise dominates initially, while the injected Langevin noise becomes dominant later. To achieve this behaviour, we perform a simple parameter search over $\epsilon_0$. Samples are retained only after this transition has occurred. The initial phase,during which the algorithm behaves similarly to stochastic optimisation before entering a sampling regime, is treated as burn-in and discarded in subsequent analysis.
 
 <p align="center">
   <img
@@ -60,7 +59,15 @@ we perform a simple parameter search over $\epsilon_0$. Samples are retained onl
 
 
 ***
-3–Uncertainity Graph
+3–Uncertainity 
+
+We then examined predictive uncertainty, which is a central advantage of Bayesian sampling methods over optimisation based approaches. Using the Australian Credit Approval
+dataset, we observe that predictive uncertainty varies substantially across test points, even when mean predicted probabilities are similar. For some inputs, predictions are highly stable across posterior samples, resulting in narrow credible intervals. For others, small changes in the model parameters lead to large variations in predicted probability, producing wide credible intervals. This variability reflects uncertainty in the model parameters from the data and cannot be captured by point estimates alone. In contrast, standard optimisation-based methods, which rely on a single parameter estimate, cannot express this distinction between stable and unstable predictions.
+
+
+<p align="center">
+<img width="2067" height="1168" alt="post_pred_prob" src="https://github.com/user-attachments/assets/257c792b-d715-4985-b0d2-026e5239ab3e" />
+</p>
 
 
 ***
