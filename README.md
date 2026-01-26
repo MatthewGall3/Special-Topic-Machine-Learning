@@ -73,7 +73,7 @@ dataset, we observe that predictive uncertainty varies substantially across test
 ***
 ## 4–cSGLD 
 
-In our previous logistic regression example, the posterior distribution was largely unimodal and well behaved. In contrast, the posterior distribution over a neural network’s parameters (weights) is typically high-dimensional and highly multimodal. When using a standard decaying step size in SGLD, the sampler rapidly converges to a single mode and fails to adequately explore the posterior distribution. To mitagate this issue we employed a**cyclical step-size schedule**. This schedule preserves asymptotic correctness by ensuring a vanishing step size, while also mitigating collapse to a single mode by periodically reintroducing larger step sizes.
+In our previous logistic regression example, the posterior distribution was largely unimodal and well behaved. In contrast, the posterior distribution over a neural network’s parameters (weights) is typically high-dimensional and highly multimodal. When using a standard decaying step size in SGLD, the sampler rapidly converges to a single mode and fails to adequately explore the posterior distribution. To mitagate this issue we employed a **cyclical step-size schedule**. This schedule preserves asymptotic correctness by ensuring a vanishing step size, while also mitigating collapse to a single mode by periodically reintroducing larger step sizes.
 
 <p align="center">
 <img width="8000" height="400" alt="stepsize_decay" src="https://github.com/user-attachments/assets/a546be61-09fa-4d11-bba2-08772f614b7e" />
