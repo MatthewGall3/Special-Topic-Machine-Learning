@@ -46,7 +46,7 @@ use of SGLD as a scalable approximation to classical MCMC in this setting.
 ***
 ## 2–Tuning Parameters
 
-When applying SGLD to a dataset, we must make sure to tune the step-size schedule correctly. We use a decaying step size and choose the initial value $\epsilon_0$ so that stochastic minibatch noise dominates initially, while the injected Langevin noise becomes dominant later. To achieve this behaviour, we perform a simple parameter search over $\epsilon_0$. Samples are retained only after this transition has occurred. The initial phase,during which the algorithm behaves similarly to stochastic optimisation before entering a sampling regime, is treated as burn-in and discarded in subsequent analysis.
+When applying SGLD to a dataset, we must make sure to tune the step-size schedule correctly. We use a decaying step size and choose the initial value $\epsilon_0$ so that stochastic minibatch noise dominates initially, while the injected Langevin noise becomes dominant later. To achieve this behaviour, we perform a simple parameter search over $\epsilon_0$. Samples are retained only after this transition has occurred. The initial phase, during which the algorithm behaves similarly to stochastic optimisation before entering a sampling regime, is treated as burn-in and discarded in subsequent analysis.
 
 <p align="center">
   <img
@@ -66,7 +66,7 @@ dataset, we observe that predictive uncertainty varies substantially across test
 
 
 <p align="center">
-<img width="1400" height="800" alt="post_pred_prob" src="https://github.com/user-attachments/assets/257c792b-d715-4985-b0d2-026e5239ab3e" />
+<img width="1000" height="600" alt="post_pred_prob" src="https://github.com/user-attachments/assets/257c792b-d715-4985-b0d2-026e5239ab3e" />
 </p>
 
 
@@ -76,7 +76,7 @@ dataset, we observe that predictive uncertainty varies substantially across test
 In our previous logistic regression example, the posterior distribution was largely unimodal and well behaved. In contrast, the posterior distribution over a neural network’s parameters (weights) is typically high-dimensional and highly multimodal. When using a standard decaying step size in SGLD, the sampler rapidly converges to a single mode and fails to adequately explore the posterior distribution. To mitagate this issue we employed a**cyclical step-size schedule**. This schedule preserves asymptotic correctness by ensuring a vanishing step size, while also mitigating collapse to a single mode by periodically reintroducing larger step sizes.
 
 <p align="center">
-<img width="1000" height="500" alt="stepsize_decay" src="https://github.com/user-attachments/assets/a546be61-09fa-4d11-bba2-08772f614b7e" />
+<img width="8000" height="400" alt="stepsize_decay" src="https://github.com/user-attachments/assets/a546be61-09fa-4d11-bba2-08772f614b7e" />
 </p>
 
 ***
